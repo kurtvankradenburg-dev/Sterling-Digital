@@ -23,7 +23,7 @@
   --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
   --radius: 12px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 [data-theme="dark"] {
@@ -104,11 +104,15 @@ button, input, textarea, select {
 }
 
 .loader-logo {
-  font-size: 3rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: loaderPulse 1s ease-in-out infinite alternate;
+}
+
+.loader-logo .logo-mark {
+  width: 64px;
+  height: 64px;
 }
 
 @keyframes loaderPulse {
@@ -192,13 +196,25 @@ button, input, textarea, select {
 }
 
 .nav-logo {
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   z-index: 1001;
 }
 
-.nav-logo span {
+.nav-logo .logo-mark {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.nav-logo .logo-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.nav-logo .logo-text span {
   color: var(--accent);
 }
 
@@ -1008,12 +1024,24 @@ button, input, textarea, select {
 }
 
 .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-logo .logo-mark {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.footer-logo .logo-text {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.03em;
 }
 
-.footer-logo span {
+.footer-logo .logo-text span {
   color: var(--accent);
 }
 
